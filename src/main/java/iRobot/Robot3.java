@@ -35,7 +35,7 @@ public class Robot3 {
      */
 
     private Robot3(int level, String name) {
-        if (name.isEmpty() || Character.isDigit(name.charAt(0)) || Robot3.names.indexOf(name) == -1) {
+        if (name.isEmpty() || Character.isDigit(name.charAt(0)) || Robot3.names.indexOf(name) != -1) {
             this.name = String.format("Defaultname %d", defaultIndex++);
         } else {
             this.name = name;
@@ -64,5 +64,60 @@ public class Robot3 {
     public State getState() {
         return state;
     }
+    // Методы вкл/выкл подсистем
+
+    public void power () {
+        if (state == State.Off) {
+            this.powerOn();
+            this.state = State.On;
+        }
+        else {
+            this.powerOff();
+            this.state = State.Off;
+        }
+        System.out.println();
+    }
+    public void powerOn(){
+        startBios();
+        startOS();
+        sayHi();
+    }
+    public void powerOff(){
+        sayBye();
+        stopOS();
+        stopBios();
+    }
+
+    /** Загрузка Bios */
+    private void startBios() {
+        System.out.println("Start Bios...");
+    }
+    /** Загрузка OS */
+    private void startOS() {
+        System.out.println("Start OS...");
+    }
+    /** Приветствие */
+    public void sayHi() {
+        System.out.println("Say Hi...");
+    }
+    /** Выгрузка Bios */
+    public void stopBios() {
+        System.out.println("Stop Bios...");
+    }
+    /** Выгрузка OS */
+    private void stopOS() {
+        System.out.println("Stop OS...");
+    }
+    /** Прощание */
+    private void sayBye() {
+        System.out.println("Bye...");
+    }
+    /** Работа */
+    public void work() {
+        if (state == State.On) {
+            System.out.println("Working...");
+        }
+    }
+
 }
 

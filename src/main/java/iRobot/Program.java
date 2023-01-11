@@ -6,6 +6,16 @@ public class Program {
         Robot3 robot3 = new Robot3("robotSuper");
         System.out.printf("robot's level: %d   name: %s   state: %s \n", robot3.getLevel(),
                 robot3.getName(), robot3.getState());
+        System.out.println("Go Go Go\n");
+
+        robot3.power();
+
+        robot3.work();
+        robot3.power();
+        robot3.work();
+
+        robot3.power();
+        robot3.work();
 
 //        Robot2 robot2 = new Robot2(99, "robotAnalytics");
 //        System.out.printf("robots level: %d   name: %s\n", robot2.getLevel(), robot2.getName());
