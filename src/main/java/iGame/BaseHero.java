@@ -10,19 +10,21 @@ public class BaseHero {
     protected int hp;
     protected int maxHp;
 
+    static {
+        number = 0;
+        Random r = new Random();
+    }
+
     public BaseHero(String name, int hp) {
         this.name = name;
         this.hp = hp;
     }
 
-    public BaseHero() {
-        this.name = "Viking";
-        this.hp = 111;
-    }
+//    public BaseHero() {
+//        this.name = "Viking";
+//        this.hp = 111;
+//    }
 
-    public BaseHero(String format) {
-
-    }
 
     public String getInfo() {
         return String.format("name: %s   hp: %d   type: %s", name, hp, getClass().getSimpleName());

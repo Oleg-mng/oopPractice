@@ -1,18 +1,24 @@
 package iGame;
 
+import java.util.Random;
+
 public class Magician extends BaseHero {
     private int mana;
     private int maxMana;
+    static {
+        Magician.number = 0;
+        Magician.r = new Random();
+    }
 
     public Magician() {
-//        super.name = "L";
-        super(String.format("Hero_Magician %d", number++), BaseHero.r.nextInt(100, 200));
-        this.maxMana = BaseHero.r.nextInt(50,150);
+
+        super(String.format("Hero_Magician %d", Magician.number++), Magician.r.nextInt(100, 200));
+        this.maxMana = Magician.r.nextInt(150, 300);
         this.mana = maxMana;
     }
 
     public int attack() {
-        int damage = BaseHero.r.nextInt(20, 30);
+        int damage = Magician.r.nextInt(20, 40);
         this.mana -= damage * 0.8;
         if (mana < 0) {
             return 0;

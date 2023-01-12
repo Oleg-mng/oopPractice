@@ -13,12 +13,12 @@ public class Teams {
         Priest[] priests = new Priest[priestCount];
         Magician[] magicians = new Magician[magicianCount];
 
-        for (int i=0; i<=priestCount; i++){
+        for (int i = 0; i < priestCount; i++) {
             priests[i] = new Priest();
             System.out.println(priests[i].getInfo());
         }
         System.out.println();
-        for (int i=0; i<=magicianCount; i++){
+        for (int i = 0; i < magicianCount; i++) {
             magicians[i] = new Magician();
             System.out.println(magicians[i].getInfo());
         }
