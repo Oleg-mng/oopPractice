@@ -17,15 +17,15 @@ public class Magician extends BaseHero {
         this.mana = maxMana;
     }
 
-    public int attack() {
-        int damage = Magician.r.nextInt(20, 40);
-        this.mana -= damage * 0.8;
-        if (mana < 0) {
-            return 0;
-        } else {
-            return damage;
-        }
-    }
+//    public int attack() {
+//        int damage = Magician.r.nextInt(20, 40);
+//        this.mana -= damage * 0.8;
+//        if (mana < 0) {
+//            return 0;
+//        } else {
+//            return damage;
+//        }
+//    }
     public String getInfo() {
         return String.format("%s   mana: %d", super.getInfo(), this.mana);
     }
