@@ -29,7 +29,6 @@ public class Program {
         System.out.println(hero3.getInfo());
         System.out.println(hero4.getInfo());
 
-
 //        int teamCount = 10;
 //        Random rand = new Random();
 //        int magicianCount = 0;

@@ -18,6 +18,7 @@ public class BaseHero {
     public BaseHero(String name, int hp) {
         this.name = name;
         this.hp = hp;
+        this.maxHp = hp;
     }
 
     public String getInfo() {
@@ -27,9 +28,9 @@ public class BaseHero {
 //    public void healed(int hp) {
 //        this.hp = (hp + this.hp) > maxHp ? this.maxHp : hp + this.hp;
 
-    public void healed (BaseHero target) {
+    public void healed (BaseHero point) {
         int cure = BaseHero.r.nextInt(3, 7);
-        target.getCure(cure);
+        point.getCure(cure);
     }
 
     public void attack (BaseHero target){
@@ -53,10 +54,9 @@ public class BaseHero {
         }
     }
     public void getCure(int cure) {
-        if ((hp + cure) < maxHp) {
-            hp += cure;
-        }
+        if ((hp  + cure) < maxHp) {
+            hp  += cure;
     }
-
+    }
 }
 
