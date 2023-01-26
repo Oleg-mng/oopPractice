@@ -4,7 +4,7 @@ package Abstraction;
 public class Foo {
     public Integer value;
 
-    public static Integer count;
+    protected static Integer count;
 
     public static Integer getCount(){
         return count;
