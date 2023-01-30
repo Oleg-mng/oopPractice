@@ -32,6 +32,11 @@ public abstract class BaseHero {
         this.hp = Hp + this.hp > this.maxHp ? this.maxHp:Hp + this.hp;
     }
 
+    public void attack (aGame.BaseHero target){
+        int damage = aGame.BaseHero.r.nextInt(10, 30);
+        target.getDamage(damage);
+    }
+
     protected void getDamage(int damage){
         if ((this.hp - damage) > 0) {
             this.hp -=damage;
