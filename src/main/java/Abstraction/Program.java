@@ -7,8 +7,8 @@ public class Program {
     }
     
     public static void main(String[] args) {
-        Program prog = new Program();
-        prog.A();
+        Program prob = new Program();
+        prob.A();
         Foo f1 = new Foo();
         f1.value = 123;
         //System.out.println(f1.value);

@@ -12,7 +12,7 @@ public class Program {
 
         List<BaseHero> team = new ArrayList<>();
         for (int i = 0; i < teamCount; i++){
-            int val = rand.nextInt(4);
+            int val = rand.nextInt(3);
             switch (val) {
                 case (0):
                     team.add(new Priest());
@@ -23,16 +23,16 @@ public class Program {
                 case (2):
                     team.add(new Druid());
                     break;
-                default:
-                    team.add(new BaseHero());
-                    break;
+//                default:
+//                    team.add(new BaseHero());
+//                    break;
             }
             System.out.println(team.get(i).getInfo());
         }
         System.out.println();
 
-        BaseHero hero = new BaseHero();
-        System.out.println(hero);
+//        BaseHero hero = new BaseHero();
+//        System.out.println(hero);
         Magician magician = new Magician();
         System.out.println(magician);
         Priest priest = new Priest();
