@@ -17,7 +17,7 @@ public class Program {
         team1.add(new Paladin());
         team1.add(new Shaman());
 
-        var h = team1.get(3);
+        var h = team1.get(0);
         if (h instanceof Warrior) {
             ((Warrior) h).attack(null);
         }
@@ -30,13 +30,17 @@ public class Program {
         List<Healer> team2 = new ArrayList<>();
         team2.add(new Priest());
         team2.add(new Shaman());
+        team2.add(new God());
 
         team2.get(0).healing(null);
 
         List<Warrior> team3 = new ArrayList<>();
         team3.add(new Paladin());
         team3.add(new Paladin());
+        team3.add(new God());
 
         team3.get(0).attack(null);
+        ((Warrior)team3.get(2)).attack(team1.get(1));
+        System.out.println("+");
     }
 }

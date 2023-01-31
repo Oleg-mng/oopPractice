@@ -11,6 +11,7 @@ public class God extends Hero implements Healer, Warrior {
 
     @Override
     public void attack(Hero target) {
+        System.out.println("Attack from God");
 
     }
 }
