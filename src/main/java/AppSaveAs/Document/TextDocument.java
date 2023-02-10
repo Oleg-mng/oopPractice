@@ -2,9 +2,11 @@ package AppSaveAs.Document;
 
 public class TextDocument {
 
+
     StringBuilder sb;
     public TextDocument(){
         sb = new StringBuilder();
+        System.out.println();
     }
 
     public TextDocument(String data){
