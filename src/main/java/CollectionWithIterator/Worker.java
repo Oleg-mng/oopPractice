@@ -1,4 +1,4 @@
-package Worker;
+package CollectionWithIterator;
 
 public class Worker {
     public String firstName;
@@ -13,6 +13,6 @@ public class Worker {
         this.salary = salary;
     }
     public String fullName(){
-        return String.format("%s %s", firstName,lastName);
+        return String.format("%s %s", firstName, lastName);
     }
 }

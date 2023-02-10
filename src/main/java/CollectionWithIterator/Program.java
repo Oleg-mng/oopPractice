@@ -1,4 +1,4 @@
-package Worker;
+package CollectionWithIterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
