@@ -1,4 +1,4 @@
-package Beverage;
+package CupOfCoffee;
 
 public class Beans extends Ingredient{
 
